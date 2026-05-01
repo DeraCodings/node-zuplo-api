@@ -9,6 +9,7 @@ configDotenv();
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+const BACKEND_URL = process.env.BACKEND_URL || `http://localhost:${PORT}`;
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -74,10 +75,10 @@ app.get('/backend-eu/orders', (req, res) => {
 app.get('/api/products', async (req, res) => {
   const regionHeader = req.headers['x-region'] as string;
   const isEu = regionHeader === 'eu';
-  let backendUrl = 'http://localhost:3000/backend/products';
+  let backendUrl = `${BACKEND_URL}/backend/products`;
 
   if (isEu) {
-    backendUrl = 'http://localhost:3000/backend-eu/products';
+    backendUrl = `${BACKEND_URL}/backend-eu/products`;
   }
 
   console.log(`[api][products] calling backend: ${backendUrl}`);
@@ -126,10 +127,10 @@ app.get('/api/orders', async (req, res) => {
   }
 
   const isEu = regionHeader === 'eu';
-  let backendUrl = 'http://localhost:3000/backend/orders';
+  let backendUrl = `${BACKEND_URL}/backend/orders`;
 
   if (isEu) {
-    backendUrl = 'http://localhost:3000/backend-eu/orders';
+    backendUrl = `${BACKEND_URL}/backend-eu/orders`;
   }
 
   console.log(`Orders API hit -> backend: ${backendUrl}`);
