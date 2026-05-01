@@ -1,0 +1,303 @@
+{
+  "default": {
+    "products": [
+      {
+        "id": 1,
+        "sku": "ZU-5001",
+        "product_name": "Aurora X1 5G Smartphone",
+        "brand": "AstraTech",
+        "category": "Smartphones",
+        "description": "A premium 5G smartphone with a 6.7-inch AMOLED display, 108MP triple camera system, and 512GB storage for global travelers.",
+        "price_cents": 89900,
+        "currency": "USD",
+        "inventory_count": 320,
+        "rating": 4.8,
+        "weight_grams": 185,
+        "dimensions_mm": { "width": 74, "height": 162, "depth": 7.8 },
+        "image_url": "https://cdn.example.com/products/aurora-x1-5g.jpg",
+        "tags": ["5G", "AMOLED", "Global", "Dual SIM", "Fast Charging"]
+      },
+      {
+        "id": 2,
+        "sku": "ZU-7202",
+        "product_name": "NovaBook Pro 14",
+        "brand": "AstraTech",
+        "category": "Laptops",
+        "description": "A lightweight laptop with a 14-inch Retina display, Intel i7, 32GB RAM, and 1TB SSD optimized for business, design, and remote work.",
+        "price_cents": 149900,
+        "currency": "USD",
+        "inventory_count": 110,
+        "rating": 4.7,
+        "weight_grams": 1290,
+        "dimensions_mm": { "width": 312, "height": 215, "depth": 14.9 },
+        "image_url": "https://cdn.example.com/products/novabook-pro-14.jpg",
+        "tags": ["Retina", "Lightweight", "Business", "SSD", "Long Battery"]
+      },
+      {
+        "id": 3,
+        "sku": "ZU-8805",
+        "product_name": "PulseAir Wireless Noise-Cancelling Headphones",
+        "brand": "AstraAudio",
+        "category": "Audio",
+        "description": "Premium over-ear headphones with adaptive noise cancellation, 45-hour battery life, and multi-device Bluetooth pairing.",
+        "price_cents": 25900,
+        "currency": "USD",
+        "inventory_count": 540,
+        "rating": 4.6,
+        "weight_grams": 290,
+        "dimensions_mm": { "width": 190, "height": 220, "depth": 85 },
+        "image_url": "https://cdn.example.com/products/pulseair-headphones.jpg",
+        "tags": ["Noise Cancelling", "Bluetooth", "Travel", "Wireless", "Long Battery"]
+      },
+      {
+        "id": 4,
+        "sku": "ZU-3104",
+        "product_name": "Orbit Active Smartwatch",
+        "brand": "AstraWear",
+        "category": "Wearables",
+        "description": "A durable smartwatch with GPS, heart rate tracking, sleep analytics, and an always-on display for day-to-day and outdoor use.",
+        "price_cents": 17900,
+        "currency": "USD",
+        "inventory_count": 270,
+        "rating": 4.5,
+        "weight_grams": 52,
+        "dimensions_mm": { "width": 44, "height": 44, "depth": 12.5 },
+        "image_url": "https://cdn.example.com/products/orbit-active-smartwatch.jpg",
+        "tags": ["GPS", "Fitness", "Health", "Water Resistant", "Wearable"]
+      }
+    ],
+    "orders": [
+      {
+        "id": 1,
+        "order_number": "ZP-1000432",
+        "status": "fulfilled",
+        "currency": "USD",
+        "total_cents": 229800,
+        "placed_at": "2026-04-18T10:22:00Z",
+        "customer": {
+          "id": 101,
+          "name": "Mia Anders",
+          "email": "mia.anders@example.com",
+          "country": "United States"
+        },
+        "shipping_address": {
+          "line1": "1288 Parkview Lane",
+          "city": "Austin",
+          "state": "TX",
+          "postal_code": "78701",
+          "country": "United States"
+        },
+        "payment_method": "VISA",
+        "shipping_method": "Express International",
+        "items": [
+          {
+            "product_id": 1,
+            "sku": "ZU-5001",
+            "name": "Aurora X1 5G Smartphone",
+            "quantity": 1,
+            "unit_price_cents": 89900,
+            "total_price_cents": 89900
+          },
+          {
+            "product_id": 3,
+            "sku": "ZU-8805",
+            "name": "PulseAir Wireless Noise-Cancelling Headphones",
+            "quantity": 2,
+            "unit_price_cents": 25900,
+            "total_price_cents": 51800
+          },
+          {
+            "product_id": 4,
+            "sku": "ZU-3104",
+            "name": "Orbit Active Smartwatch",
+            "quantity": 1,
+            "unit_price_cents": 17900,
+            "total_price_cents": 17900
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "order_number": "ZP-1000433",
+        "status": "processing",
+        "currency": "USD",
+        "total_cents": 149900,
+        "placed_at": "2026-04-21T15:48:00Z",
+        "customer": {
+          "id": 102,
+          "name": "Amir Hosseini",
+          "email": "amir.hosseini@example.com",
+          "country": "United Kingdom"
+        },
+        "shipping_address": {
+          "line1": "Flat 4, 32 Kingsway",
+          "city": "London",
+          "postal_code": "WC2B 6NH",
+          "country": "United Kingdom"
+        },
+        "payment_method": "Mastercard",
+        "shipping_method": "Standard Europe",
+        "items": [
+          {
+            "product_id": 2,
+            "sku": "ZU-7202",
+            "name": "NovaBook Pro 14",
+            "quantity": 1,
+            "unit_price_cents": 149900,
+            "total_price_cents": 149900
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "order_number": "ZP-1000434",
+        "status": "pending",
+        "currency": "USD",
+        "total_cents": 107800,
+        "placed_at": "2026-04-23T08:05:00Z",
+        "customer": {
+          "id": 103,
+          "name": "Lucía Martínez",
+          "email": "lucia.martinez@example.com",
+          "country": "Spain"
+        },
+        "shipping_address": {
+          "line1": "Calle Mayor 18",
+          "city": "Madrid",
+          "postal_code": "28013",
+          "country": "Spain"
+        },
+        "payment_method": "PayPal",
+        "shipping_method": "Priority Europe",
+        "items": [
+          {
+            "product_id": 1,
+            "sku": "ZU-5001",
+            "name": "Aurora X1 5G Smartphone",
+            "quantity": 1,
+            "unit_price_cents": 89900,
+            "total_price_cents": 89900
+          },
+          {
+            "product_id": 4,
+            "sku": "ZU-3104",
+            "name": "Orbit Active Smartwatch",
+            "quantity": 1,
+            "unit_price_cents": 17900,
+            "total_price_cents": 17900
+          }
+        ]
+      }
+    ]
+  },
+  "eu": {
+    "products": [
+      {
+        "id": 1,
+        "sku": "ZU-5001-EU",
+        "product_name": "Aurora X1 5G Smartphone",
+        "brand": "AstraTech",
+        "category": "Smartphones",
+        "description": "A premium 5G smartphone with a 6.7-inch AMOLED display, 108MP triple camera system, and 512GB storage for European markets.",
+        "price_cents": 84900,
+        "currency": "EUR",
+        "inventory_count": 210,
+        "rating": 4.8,
+        "weight_grams": 185,
+        "dimensions_mm": { "width": 74, "height": 162, "depth": 7.8 },
+        "image_url": "https://cdn.example.com/products/aurora-x1-5g.jpg",
+        "tags": ["5G", "AMOLED", "Global", "Dual SIM", "Fast Charging"]
+      },
+      {
+        "id": 2,
+        "sku": "ZU-7202-EU",
+        "product_name": "NovaBook Pro 14",
+        "brand": "AstraTech",
+        "category": "Laptops",
+        "description": "A lightweight laptop with a 14-inch Retina display, Intel i7, 32GB RAM, and 1TB SSD optimized for European business and creative users.",
+        "price_cents": 139900,
+        "currency": "EUR",
+        "inventory_count": 95,
+        "rating": 4.7,
+        "weight_grams": 1290,
+        "dimensions_mm": { "width": 312, "height": 215, "depth": 14.9 },
+        "image_url": "https://cdn.example.com/products/novabook-pro-14.jpg",
+        "tags": ["Retina", "Lightweight", "Business", "SSD", "Long Battery"]
+      }
+    ],
+    "orders": [
+      {
+        "id": 1,
+        "order_number": "ZP-EU-200111",
+        "status": "fulfilled",
+        "currency": "EUR",
+        "total_cents": 169800,
+        "placed_at": "2026-04-19T13:18:00Z",
+        "customer": {
+          "id": 201,
+          "name": "Sofia Schmidt",
+          "email": "sofia.schmidt@example.de",
+          "country": "Germany"
+        },
+        "shipping_address": {
+          "line1": "Bahnhofstrasse 21",
+          "city": "Berlin",
+          "postal_code": "10115",
+          "country": "Germany"
+        },
+        "payment_method": "SEPA",
+        "shipping_method": "Express EU",
+        "items": [
+          {
+            "product_id": 1,
+            "sku": "ZU-5001-EU",
+            "name": "Aurora X1 5G Smartphone",
+            "quantity": 1,
+            "unit_price_cents": 84900,
+            "total_price_cents": 84900
+          },
+          {
+            "product_id": 2,
+            "sku": "ZU-7202-EU",
+            "name": "NovaBook Pro 14",
+            "quantity": 1,
+            "unit_price_cents": 139900,
+            "total_price_cents": 139900
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "order_number": "ZP-EU-200112",
+        "status": "processing",
+        "currency": "EUR",
+        "total_cents": 84900,
+        "placed_at": "2026-04-24T09:40:00Z",
+        "customer": {
+          "id": 202,
+          "name": "Émile Rousseau",
+          "email": "emile.rousseau@example.fr",
+          "country": "France"
+        },
+        "shipping_address": {
+          "line1": "14 Rue de la Paix",
+          "city": "Paris",
+          "postal_code": "75002",
+          "country": "France"
+        },
+        "payment_method": "Carte Bancaire",
+        "shipping_method": "Standard EU",
+        "items": [
+          {
+            "product_id": 1,
+            "sku": "ZU-5001-EU",
+            "name": "Aurora X1 5G Smartphone",
+            "quantity": 1,
+            "unit_price_cents": 84900,
+            "total_price_cents": 84900
+          }
+        ]
+      }
+    ]
+  }
+}
