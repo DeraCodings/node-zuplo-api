@@ -34,8 +34,9 @@ app.use(express.json());
 
 // This route simulates a backend endpoint for fetching products in non-EU regions. It retrieves the product data based on the region specified in the request headers. It returns the data after an artificial delay of 180ms.
 app.get('/backend/products', (req, res) => {
-  const items = getRegionData('default').products;
-  console.log('[backend] /backend/products called (default)');
+  const region = req.headers['x-region'] as string || 'default';
+  const items = getRegionData(region).products;
+  console.log(`[backend] /backend/products called (${region})`);
   setTimeout(() => {
     res.json({ items });
   }, 180);
@@ -43,30 +44,31 @@ app.get('/backend/products', (req, res) => {
 
 // This route simulates a backend endpoint for fetching orders in non-EU regions. It retrieves the order data based on the region specified in the request headers. It returns the data after an artificial delay of 210ms.
 app.get('/backend/orders', (req, res) => {
-  const items = getRegionData('default').orders;
-  console.log('[backend] /backend/orders called (default)');
+  const region = req.headers['x-region'] as string || 'default';
+  const items = getRegionData(region).orders;
+  console.log(`[backend] /backend/orders called (${region})`);
   setTimeout(() => {
     res.json({ items });
   }, 210);
 });
 
 // This route simulates a backend endpoint for fetching products in the EU region. It retrieves the product data based on the region specified in the request headers. It returns the data after an artificial delay of 190ms.
-app.get('/backend-eu/products', (req, res) => {
-  const items = getRegionData('eu').products;
-  console.log('[backend] /backend-eu/products called (EU)');
-  setTimeout(() => {
-    res.json({ items });
-  }, 190);
-});
+// app.get('/backend-eu/products', (req, res) => {
+//   const items = getRegionData('eu').products;
+//   console.log('[backend] /backend-eu/products called (EU)');
+//   setTimeout(() => {
+//     res.json({ items });
+//   }, 190);
+// });
 
 // This route simulates a backend endpoint for fetching orders in the EU region. It retrieves the order data based on the region specified in the request headers. It returns the data after an artificial delay of 220ms.
-app.get('/backend-eu/orders', (req, res) => {
-  const items = getRegionData('eu').orders;
-  console.log('[backend] /backend-eu/orders called (EU)');
-  setTimeout(() => {
-    res.json({ items });
-  }, 220);
-});
+// app.get('/backend-eu/orders', (req, res) => {
+//   const items = getRegionData('eu').orders;
+//   console.log('[backend] /backend-eu/orders called (EU)');
+//   setTimeout(() => {
+//     res.json({ items });
+//   }, 220);
+// });
 
 // Start server
 app.listen(PORT, () => {
